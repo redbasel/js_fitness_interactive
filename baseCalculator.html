@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- use <oninput="will rin javascript when altered by user for number fields"-->
+    <!-- use <onchange="will rin javascript when altered by user for radio preselects (male female) fields"-->
+        <!-- onclick= " use fo rfinal"" Calculate button"-->
+<body>
+    <h1>Daily Energy Calculator</h1>
+    <h2>Basal Metabolic Rate</h2>
+    <!-- (age) 
+    (length)
+    (age)
+    (Male BMR = (9.99 x kg) + (6.25 x cm) - (4.92 x ålder) + 5 ) -->
+
+    <label for="age">Age</label>
+
+    <input type="number" id="age" name="age" min="18" max="99">
+
+    <label for="length">Length</label>
+
+    <input type="number" id="length" name="length" min="140" max="250">
+
+    <label for="weight">Weight</label>
+
+    <input type="number" id="weight" name="weight" min="40" max="250">
+
+    <label for="bmrCalculated">Calculated BMR</label>
+
+    <input type="number" id="bmrCalculated" name="bmrCalculated" placeholder="YOUR BMR WILL SHOW HERE">
+
+
+    <!--BMR VALUE IDSPLAY--> 
+
+    <h2>Physcial Activity Level</h2>
+    <!--(pick value between 1 - 1.90)
+    Bedridden (1.0)
+    Only seated (1.1)
+    Light movement, cleaning at home (1.2)
+    Light exercise, one or two walks a week (1.3)
+    Light exercise 1 – 3 times a week (1.4)
+    Normal daily activity, trainng with normal intensity 3 – 4 days a week (1.5)
+    Normal daily activty, training 4 – 5 times a week (1.6)
+    Physically demanding lifestyle, Intense exercise 5 – 6 days a week (1.7)
+    Physically demanding lifestyle, Intense exercise 7 days a week (1.8)
+    Elite sport, intense exercise more than once daily (1.9) 
+
+    use option for this -->
+
+    <label for="pal">PAL</label>
+
+    <input type="number" id="pal" name="pal" min="1.00" max="1.90">
+
+    <h2>Total Daily Energy Expenditure</h2>
+    <!-- (TDEE = PAL * BMR)
+    (Fitness Goal with preselected value)
+    (lose a lot of weight, -500) -->
+    <h2>Macro Split</h2>
+
+
+
+
+
+</body>
+
+</html>
