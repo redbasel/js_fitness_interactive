@@ -19,7 +19,14 @@ let bmrMale = ((9.99 * weight) + (6.25 * length) - (4.92 * age) +5)
 console.log(bmrMale)
 
 
-document.getElementById('bmrCalculated').innerHtml = "lol"
+document.getElementById('bmrCalculated').value = bmrMale
+
+
+
+/* PAL */
+
+function() palCalculated = (bmrMale * document.getElementById('palActivity').value)
+
 
 
 
