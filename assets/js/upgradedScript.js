@@ -1,5 +1,5 @@
 /* Setting the variables for the BMR calculation age, weight lengh.. */
-
+/*
 let age = document.getElementById('age').value;
 let length = document.getElementById('length').value;
 let weight = document.getElementById('weight').value;
@@ -7,6 +7,7 @@ let weight = document.getElementById('weight').value;
 console.log(age);
 console.log(weight);
 console.log(length);
+*/
 
 /* fist we will try only with the male formula, whne hti s works we will do a 
 if else becuase the formula differs from male and female
@@ -15,21 +16,23 @@ if else becuase the formula differs from male and female
 
 
 function bmrMale() {
+    console.log("Function called");
     let weight = document.getElementById('weight').value;
     let length = document.getElementById('length').value;
     let age = document.getElementById('age').value;
-    }
-    return ((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
-};
+    
+    return parseInt((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
+    
+}
 
 bmrMaleResult = bmrMale();
 
 /*let bmrMale = ((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5)*/
 
-console.log(bmrMaleResult)
+/*console.log(bmrMaleResult)*/
 
 
-document.getElementById('bmrCalculated').value = bmrMale
+document.getElementById('bmrCalculated').value = bmrMaleResult
 
 
 
@@ -37,11 +40,11 @@ document.getElementById('bmrCalculated').value = bmrMale
 
 let palValue = document.getElementById('palActivity').value
 
-console.log(palValue)
+/*console.log(palValue)*/
 
-document.getElementById('tdeeCalculated').value = (palValue * bmrMale)
+document.getElementById('tdeeCalculated').value = parseInt(palValue * bmrMaleResult)
 
-let tdeeValueArithmetic = (palValue * bmrMale)
+let tdeeValueArithmetic = (palValue * bmrMaleResult)
 
 
 /* function() palCalculated = (bmrMale * document.getElementById('palActivity').value)
@@ -65,7 +68,7 @@ my own code that i usein a different program.
     */
 let weightGoalJs = document.getElementById('weightGoal').value
 
-console.log(weightGoalJs);
+/* console.log(weightGoalJs); */
 /*
     function calcOptimalProtein() {
 
@@ -94,33 +97,34 @@ document.getElementById('optimalCalorieIntake').value = finalCalorieIntake
 
 function calcOptimalProtein() {
     let weight = document.getElementById('weight').value;
-}
+
 
 if (weightGoalJs == -500) {
-    return (weight * 2.1);
+    return parseInt(weight * 2.1);
 }
 
 if (weightGoalJs == -250) {
-    return (weight * 2.0);
+    return parseInt(weight * 2.0);
 }
 
 if (weightGoalJs == 0) {
-    return (weight * 2.0);
+    return parseInt(weight * 2.0);
 }
 
 if (weightGoalJs == 250) {
-    return (weight * 2.0);
+    return parseInt(weight * 2.0);
 }
 
 if (weightGoalJs == 500) {
-    return (weight * 2.0);
+    return parseInt(weight * 2.0);
 }
 
 };
 
+
 let proteinResult = calcOptimalProtein();
 
-console.log(proteinResult);
+/*console.log(proteinResult);*/
 
 document.getElementById('proteinSplit').value = proteinResult;
 
@@ -129,31 +133,31 @@ function calcOptimalFat() {
     let weight = document.getElementById('weight').value;
 
     if (weightGoalJs == -500) {
-        return (weight * 0.9);
+        return parseInt(weight * 0.9);
     }
 
     if (weightGoalJs == -250) {
-        return (weight * 0.9);
+        return parseInt(weight * 0.9);
     }
 
     if (weightGoalJs == 0) {
-        return (weight * 0.8);
+        return parseInt(weight * 0.8);
     }
 
 
     if (weightGoalJs == 250) {
-        return (weight * 0.8);
+        return parseInt(weight * 0.8);
     }
 
     if (weightGoalJs == 500) {
-        return (weight * 0.7);
+        return parseInt(weight * 0.7);
     }
 
 };
 
 let fatResult = calcOptimalFat();
 
-console.log(fatResult);
+/*console.log(fatResult);*/
 
 document.getElementById('fatSplit').value = fatResult;
 
@@ -163,14 +167,12 @@ document.getElementById('fatSplit').value = fatResult;
 
 let carbOptimal = (finalCalorieIntake - ((proteinResult * 4) + (fatResult * 9))) / (4)
 
-console.log(carbOptimal);
+/*console.log(carbOptimal);*/
 
-document.getElementById('carbSplit').value = carbOptimal;
-
-
-console.log(finalCalorieIntake);
+document.getElementById('carbSplit').value = parseInt(carbOptimal);
 
 
+/*console.log(finalCalorieIntake);*/
 
 
 
@@ -181,4 +183,6 @@ console.log(finalCalorieIntake);
 
 
 
-console.log(calcOptimalProtein);
+
+
+/*console.log(calcOptimalProtein);*/
