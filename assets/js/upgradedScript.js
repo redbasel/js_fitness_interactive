@@ -35,7 +35,7 @@ function bmrMale() {
 }
 
 let bmrResultP = document.getElementById('bmrResult2');
-bmrResult2.addEventListener('input', bmrMale)
+bmrResultP.addEventListener('input', bmrMale)
 
 bmrMaleResult = bmrMale();
 
