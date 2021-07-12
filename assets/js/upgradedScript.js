@@ -23,7 +23,7 @@ weight.addEventListener('input', bmrMale(){
 
 
 
-
+/*
 function bmrMale() {
     console.log("Function called");
     let weight = document.getElementById('weight').value;
@@ -33,11 +33,26 @@ function bmrMale() {
     return parseInt((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
     
 }
+*/
+
+
+function bmrMale() {
+    console.log("Function called");
+    let weight = document.getElementById('weight').value;
+    let length = document.getElementById('length').value;
+    let age = document.getElementById('age').value;
+    
+    let result = parseInt((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
+
+    document.getElementById('bmrCalculated').value = result
+}
 
 let bmrResultP = document.getElementById('bmrResult2');
-bmrResultP.addEventListener('input', bmrMale)
+bmrResultP.addEventListener('change', bmrMale)
 
 bmrMaleResult = bmrMale();
+
+console.log(bmrMaleResult);
 
 
 
