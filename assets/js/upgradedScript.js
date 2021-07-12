@@ -14,9 +14,15 @@ if else becuase the formula differs from male and female
 (Male BMR = (9.99 x kg) + (6.25 x cm) - (4.92 x ålder) + 5 )
 */
 
+/* first try of event istner
 weight.addEventListener('input', bmrMale(){
     resultBmr2.textContent = this.value,
 });
+*/
+
+
+
+
 
 function bmrMale() {
     console.log("Function called");
@@ -27,6 +33,9 @@ function bmrMale() {
     return parseInt((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
     
 }
+
+let bmrResultP = document.getElementById('bmrResult2');
+bmrResult2.addEventListener('input', bmrMale)
 
 bmrMaleResult = bmrMale();
 
