@@ -34,25 +34,64 @@ function bmrMale() {
     
 }
 */
+function readPalValue() {
+    let readValue = document.getElementById('palActivity').value;
+    
 
+    console.log(readValue)
+}
 
 function bmrMale() {
     console.log("Function called");
     let weight = document.getElementById('weight').value;
     let length = document.getElementById('length').value;
     let age = document.getElementById('age').value;
-    
+    let palValue2 = document.getElementById('palActivity').value;
+    let adjustedCalorieIntake = document.getElementById('weightGoal').value;
+
     let result = parseInt((9.99 * weight) + (6.25 * length) - (4.92 * age) + 5);
+    let tdee = parseInt(palValue2 * result)
+    let adjustedCalorie = parseInt(tdee) + parseInt(adjustedCalorieIntake);
 
     document.getElementById('bmrCalculated').value = result
+    document.getElementById('tdeeCalculated').value = tdee
+    document.getElementById('optimalCalorieIntake').value = adjustedCalorie
+
+
+    let proteinResult = calcOptimalProtein();
+    document.getElementById('proteinSplit').value = proteinResult;
+
+
+    let fatResult = calcOptimalFat();
+    document.getElementById('fatSplit').value = fatResult;
+
+
+
+    let carbOptimal = (adjustedCalorie - ((proteinResult * 4) + (fatResult * 9))) / (4)
+
+
+
+    document.getElementById('carbSplit').value = parseInt(carbOptimal);
+
+
+
+
+
+    calcOptimalFat()
+    
+
+
+
 }
 
-let bmrResultP = document.getElementById('bmrResult2');
-bmrResultP.addEventListener('change', bmrMale)
 
-bmrMaleResult = bmrMale();
 
-console.log(bmrMaleResult);
+/*let bmrResultP = document.getElementById('bmrResult2');
+bmrResultP.addEventListener('change', bmrMale)*/
+
+/*bmrMaleResult = bmrMale();
+
+console.log(bmrMaleResult);*/
 
 
 
@@ -61,19 +100,31 @@ console.log(bmrMaleResult);
 /*console.log(bmrMaleResult)*/
 
 
-document.getElementById('bmrCalculated').value = bmrMaleResult
+/*document.getElementById('bmrCalculated').value = bmrMaleResult*/
 
 
 
 /* PAL */
 
+/* only testing now
+
 let palValue = document.getElementById('palActivity').value
+let bmrMaleResult = document.getElementById('bmrCalculated').value
 
-/*console.log(palValue)*/
 
-document.getElementById('tdeeCalculated').value = parseInt(palValue * bmrMaleResult)
+console.log(palValue)
+
+/*document.getElementById('tdeeCalculated').value = parseInt((palValue * bmrMaleResult))*/
+/* crucial
+document.getElementById('tdeeCalculated').innerHTML = (parseInt(palValue * bmrMaleResult))
 
 let tdeeValueArithmetic = (palValue * bmrMaleResult)
+
+end of test!! */
+
+
+
+
 
 
 /* function() palCalculated = (bmrMale * document.getElementById('palActivity').value)
@@ -120,10 +171,14 @@ let weightGoalJs = document.getElementById('weightGoal').value
     */
 /* since js is weakly coded need to clarify the negative vlaues are integers*/
 
+
+/* not needed just yet
 let finalCalorieIntake = parseInt(tdeeValueArithmetic) + parseInt(weightGoalJs)
 
-document.getElementById('optimalCalorieIntake').value = finalCalorieIntake
 
+
+document.getElementById('optimalCalorieIntake').value = finalCalorieIntake
+ */
 function calcOptimalProtein() {
     let weight = document.getElementById('weight').value;
 
@@ -147,6 +202,8 @@ if (weightGoalJs == 250) {
 if (weightGoalJs == 500) {
     return parseInt(weight * 2.0);
 }
+
+
 
 };
 
