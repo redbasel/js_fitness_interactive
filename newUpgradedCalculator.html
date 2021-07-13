@@ -8,9 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
-<!-- use <oninput="will rin javascript when altered by user for number fields"-->
-<!-- use <onchange="will rin javascript when altered by user for radio preselects (male female) fields"-->
-<!-- onclick= " use fo rfinal"" Calculate button"-->
+
 
 <body>
 
@@ -18,20 +16,17 @@
         <h1>Daily Energy Calculator Upgraded</h1> <br><br><br>
         <h2>Basal Metabolic Rate</h2>
 
-        <!-- (age) 
-    (length)
-    (age)
-    (Male BMR = (9.99 x kg) + (6.25 x cm) - (4.92 x ålder) + 5 ) -->
+
 
         <label for="age">Age</label>
 
         <input type="number" id="age" name="age" min="18" max="99" onchange="bmrMale()"><br><br>
 
-        <label for="length">Length</label>
+        <label for="length">Length in cm</label>
 
         <input type="number" id="length" name="length" min="140" max="250" onchange="bmrMale()"><br><br>
 
-        <label for="weight">Weight</label>
+        <label for="weight">Weight in kg</label>
 
         <input type="number" id="weight" name="weight" min="40" max="250" onchange="bmrMale()"><br><br>
 
@@ -45,35 +40,7 @@
         <!--BMR VALUE IDSPLAY-->
 
         <h2>Physical Activity Level</h2>
-        <!--(pick value between 1 - 1.90)
-    Bedridden (1.0)
-    Only seated (1.1)
-    Light movement, cleaning at home (1.2)
-    Light exercise, one or two walks a week (1.3)
-    Light exercise 1 – 3 times a week (1.4)
-    Normal daily activity, trainng with normal intensity 3 – 4 days a week (1.5)
-    Normal daily activty, training 4 – 5 times a week (1.6)
-    Physically demanding lifestyle, Intense exercise 5 – 6 days a week (1.7)
-    Physically demanding lifestyle, Intense exercise 7 days a week (1.8)
-    Elite sport, intense exercise more than once daily (1.9) 
 
-    use option for this -->
-        <!--
-        <label for="palActivity">Choose activity level</label>
-
-        <select id="palActivity">
-            <option value=1.00 onchange="readPalValue()">Bedridden (1.0)</option>
-            <option value=1.10 onchange="readPalValue()">Only seated (1.1)</option>
-            <option value=1.2 onchange="readPalValue()">Light movement, cleaning at home (1.2)</option>
-            <option value=1.3 onchange="readPalValue()">Light exercise, one or two walks a week (1.3)</option>
-            <option value=1.4 onchange="readPalValue()">Light exercise 1 – 3 times a week (1.4)</option>
-            <option value=1.5 onchange="readPalValue()">Normal daily activity, trainng with normal intensity 3 – 4 days a week (1.5)</option>
-            <option value=1.6 onchange="readPalValue()">Normal daily activty, training 4 – 5 times a week (1.6)</option>
-            <option value=1.7 onchange="readPalValue()">Physically demanding lifestyle, Intense exercise 5 – 6 days a week (1.7)</option>
-            <option value=1.8 onchange="readPalValue()">Physically demanding lifestyle, Intense exercise 7 days a week (1.8))</option>
-            <option value=1.9 onchange="readPalValue()">Elite sport, intense exercise more than once daily (1.9)</option>
-        </select>
--->
 
 
         <label for="palActivity">Choose activity level</label>
@@ -95,9 +62,7 @@
 
 
         <h2>Total Daily Energy Expenditure</h2>
-        <!-- (TDEE = PAL * BMR)
-    (Fitness Goal with preselected value)
-    (lose a lot of weight, -500) -->
+        <!-- (TDEE = PAL * BMR) -->
 
         <br>
 
@@ -122,17 +87,7 @@
 
         <h2>Adjusted Calorie Intake</h2>
 
-        <!--
 
-        <label for="weightGoal">Choose weight Goal</label>
-
-        <select id="weightGoal">
-            <option value=-500>Lose a lot of weight</option>
-            <option value=-250>Lose some weight</option>
-            <option value=0>Maintain weight</option>
-            <option value=250>Add some weight</option>
-            <option value=500>Add a lot of weight</option>
-        </select>-->
         <br><br>
 
         <label for="optimalCalorieIntake">Optimal Calorie Intake</label>
@@ -143,17 +98,17 @@
 
         <h2>Macro Split</h2><br>
 
-        <label for="proteinSplit">Protein</label>
+        <label for="proteinSplit">Protein in grams</label>
 
-        <input type="text" id="proteinSplit" name="proteinSplit"><br><br>
+        <input type="text" id="proteinSplit" name="proteinSplit" disabled><br><br>
 
-        <label for="fatSplit">Fat</label>
+        <label for="fatSplit">Fat in grams</label>
 
-        <input type="text" id="fatSplit" name="fatSplit"><br><br>
+        <input type="text" id="fatSplit" name="fatSplit" disabled><br><br>
 
-        <label for="carbSplit">Calorie</label>
+        <label for="carbSplit">Calorie in grams</label>
 
-        <input type="text" id="carbSplit" name="carbSplit">
+        <input type="text" id="carbSplit" name="carbSplit" disabled>
 
         <p>All integers are rounded down</p>
 
