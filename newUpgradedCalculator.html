@@ -13,8 +13,11 @@
 <body>
 
     <div class="calcArea">
-        <h1>Daily Energy Calculator Upgraded</h1> <br><br><br>
+        <h1>Daily Energy Calculator</h1> <br><br><br>
         <h2>Basal Metabolic Rate</h2>
+        <!-- The user will fill in age, length and weight. When each of these are filled they will trigger the bmrMale()
+        The bmrcalcualted is disabled because that is where the funciton will return its result and shouldnt be altered by the user
+    -->
 
 
 
@@ -37,12 +40,11 @@
 
 
 
-        <!--BMR VALUE IDSPLAY-->
+        <!--BMR VALUE DISPLAY-->
 
         <h2>Physical Activity Level</h2>
 
-
-
+<!-- The user enters their activity level wich when altered will triger the bmrMale() funciton so that the values are recalculated immediatly-->
         <label for="palActivity">Choose activity level</label>
         <input type="number" id="palActivity" name="palActivity" min="1.0" max="1.9" step="0.1"
             onchange="bmrMale()"><br><br>
@@ -62,7 +64,10 @@
 
 
         <h2>Total Daily Energy Expenditure</h2>
-        <!-- (TDEE = PAL * BMR) -->
+        <!-- (TDEE = PAL * BMR)
+        Using our past value the TDEE is now calculated and the user is faced with a option to alter their calorie intake between -500 to 500.
+        Based on if they wish to be on a calorie deficeny or surplus the macro split will be altered. 
+        -->
 
         <br>
 
@@ -97,6 +102,8 @@
 
 
         <h2>Macro Split</h2><br>
+        <!-- All required values have been entered by hte user and now th esplt can finally becalculated. it lets the user know how to allocate their calorie intake 
+        to assist them in achieving good health -->
 
         <label for="proteinSplit">Protein in grams</label>
 

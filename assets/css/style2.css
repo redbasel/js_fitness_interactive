@@ -14,7 +14,7 @@ h1 {
 h2 {
     font-size: 24px;
 }
-
+/*Created a sense of depth setting the div to brighter color, to help the user to more easily focus*/
 .calcArea {
     background-color: white;
     box-sizing: border-box;
@@ -27,7 +27,7 @@ h2 {
     padding-bottom:1%;
     border-radius:20px;
 }
-
+/* the fields that are alone unde2 the h2 caegories are all teal so that the user knows it is different and not meant to input there.*/
 #bmrCalculated {
     color: teal;
 }
@@ -39,7 +39,8 @@ h2 {
 #optimalCalorieIntake {
     color: teal;
 }
-
+/* the final section are all vlaues hat can not be altered directly by the user
+ and to assist the user in not confusing htese imprtant values i chose three highly contrasting colors*/
 #proteinSplit {
     color:red;
 }
