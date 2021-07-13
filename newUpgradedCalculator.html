@@ -13,11 +13,11 @@
 <!-- onclick= " use fo rfinal"" Calculate button"-->
 
 <body>
-    
+
     <div class="calcArea">
         <h1>Daily Energy Calculator Upgraded</h1> <br><br><br>
         <h2>Basal Metabolic Rate</h2>
-        
+
         <!-- (age) 
     (length)
     (age)
@@ -37,9 +37,9 @@
 
         <label for="bmrCalculated">BMR</label>
 
-        <input type="text" id="bmrCalculated" name="bmrCalculated">
+        <input type="text" id="bmrCalculated" name="bmrCalculated" disabled>
 
-        <p id="bmrResult2">result here for listener</p>
+
 
 
         <!--BMR VALUE IDSPLAY-->
@@ -58,7 +58,7 @@
     Elite sport, intense exercise more than once daily (1.9) 
 
     use option for this -->
-    <!--
+        <!--
         <label for="palActivity">Choose activity level</label>
 
         <select id="palActivity">
@@ -74,13 +74,23 @@
             <option value=1.9 onchange="readPalValue()">Elite sport, intense exercise more than once daily (1.9)</option>
         </select>
 -->
+
+
         <label for="palActivity">Choose activity level</label>
-        <input type="number" id="palActivity" name="palActivity" min="1.0" max="1.9" step="0.1" onchange="bmrMale()"><br><br>
-
-
-
-    
-
+        <input type="number" id="palActivity" name="palActivity" min="1.0" max="1.9" step="0.1"
+            onchange="bmrMale()"><br><br>
+        <p>
+            Bedridden (1.0)<br>
+            Only seated (1.1)<br>
+            Light movement, cleaning at home (1.2)<br>
+            Light exercise, one or two walks a week (1.3)<br>
+            Light exercise 1 – 3 times a week (1.4)<br>
+            Normal daily activity, trainng with normal intensity 3 – 4 days a week (1.5)<br>
+            Normal daily activty, training 4 – 5 times a week (1.6)<br>
+            Physically demanding lifestyle, Intense exercise 5 – 6 days a week (1.7)<br>
+            Physically demanding lifestyle, Intense exercise 7 days a week (1.8)<br>
+            Elite sport, intense exercise more than once daily (1.9)
+        </p>
 
 
 
@@ -93,15 +103,22 @@
 
         <label for="tdeeCalculated">Calculated TDEE</label>
 
-        <input type="text" id="tdeeCalculated" name="tdeeCalculated">
+        <input type="text" id="tdeeCalculated" name="tdeeCalculated" disabled>
 
         <br><br>
 
         <label for="weightGoal">Choose Calorie Adjustment</label>
-        <input type="number" id="weightGoal" name="weightGoal" min="-500" max="500" step="250" onchange="bmrMale()"><br><br>
+        <input type="number" id="weightGoal" name="weightGoal" min="-500" max="500" step="250"
+            onchange="bmrMale()"><br><br>
 
-        
 
+        <p>
+            (-500) Lose a lot of weight<br>
+            (-250) Lose some weight<br>
+            (0) Maintain weight<br>
+            (250) Add some weight<br>
+            (500)Add a lot of weight<br>
+        </p>
 
         <h2>Adjusted Calorie Intake</h2>
 
@@ -120,7 +137,9 @@
 
         <label for="optimalCalorieIntake">Optimal Calorie Intake</label>
 
-        <input type="number" id="optimalCalorieIntake" name="optimalCalorieIntake">
+        <input type="text" id="optimalCalorieIntake" name="optimalCalorieIntake" disabled>
+
+
 
         <h2>Macro Split</h2><br>
 
@@ -135,6 +154,8 @@
         <label for="carbSplit">Calorie</label>
 
         <input type="text" id="carbSplit" name="carbSplit">
+
+        <p>All integers are rounded down</p>
 
         <script src="assets/js/tesst2function.js"></script>
 
